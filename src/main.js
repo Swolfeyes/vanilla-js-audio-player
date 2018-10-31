@@ -377,17 +377,22 @@ class AudioPlayer {
   playTrack() {
     const playButton = document.querySelector('.play');
     const tracksListItem = [...this.tracksListDOMElement.children][this.activeTrackIndex];
-    const activeImage = [...this.imageDOMElement.children][this.activeTrackIndex];
+    const images = document.querySelectorAll('.current-track__header__images__item__image');
+    const activeImage = images[this.activeTrackIndex];
+    console.log(images)
+    console.log(activeImage);
+    console.log('aaa')
     const className = `tracks-list__item--clicked`;
 
     if(this.audio.paused) {
       this.audio.play();
-      activeImage.classList.add(`current-track__header__images__item--active`);
+      activeImage.classList.add(`current-track__header__images__item__image--active`);
+      activeImage.style.animationPlayState = `running`;
       playButton.classList.add(`play--paused`);
       tracksListItem.classList.add(className);
     } else {
       this.audio.pause();
-      activeImage.classList.remove(`current-track__header__images__item--active`);
+      activeImage.style.animationPlayState = `paused`;
       this.isPlaying = false;
       playButton.classList.remove(`play--paused`);
       tracksListItem.classList.remove(className);
