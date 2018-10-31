@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+@import './reset';
+@import './icon/main';
+@import 'animations/main';
+@import './current-track/main';
+@import './tracks-list/main';
+
+body {
+  background: #720520;
+  padding: 50px;
+}
+
+.wrapper {
+  display: table;
+  margin: auto;
+}
+
+.audio-player {
+  width: 100%;
+}
+
+
+
+//Media Queries 
+@media (max-width: 1024px) {
+  body {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 687px) {
+  body {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  body {
+    padding: 0;
+  }
+}

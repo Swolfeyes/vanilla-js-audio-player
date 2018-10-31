@@ -1,0 +1,87 @@
+$parent: '.tracks-list__item';
+
+.tracks-list {
+  display: table;
+  margin: 40px auto;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+
+  &__item {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 10px 0;
+    border-bottom: 0.5px solid transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s, border-color 0.3s;
+
+    &__icon {
+
+      svg {
+        width: 20px;
+        height: 20px;
+        stroke: #fff;
+        fill: #fff;
+        transition: stroke 0.3s, fill 0.3s;
+      }
+    }
+
+    &:hover {
+      border-color: #fff;
+      color: #fff;
+    }
+
+    &__title {
+      padding-left: 10px;
+      flex: 1 1 auto;
+      pointer-events: none;
+    }
+
+    &__artist {
+      pointer-events: none;
+    }
+  }
+}
+
+
+//State
+
+.tracks-list {
+
+  &__item {
+
+    &--clicked {
+      
+      #{$parent}__icon {
+        
+        .icon--play {
+          display: none;
+        }
+
+        .icon--pause {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+//Media Queries 
+@media (max-width: 1024px) {
+  
+  .tracks-list {
+    margin: 40px 0 0 0;
+  }
+}
+
+@media (max-width: 350px) {
+  
+  .tracks-list {
+    width: 100%;
+    border-radius: 0;
+  }
+}

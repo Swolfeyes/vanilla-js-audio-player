@@ -1,0 +1,13 @@
+.icon {
+  pointer-events: none;
+  display: block;
+  width: 20px;
+  height: 20px;
+  stroke-width: 0;
+  stroke: #720520;
+  fill: #720520;
+
+  &--pause {
+    display: none;
+  }
+}
