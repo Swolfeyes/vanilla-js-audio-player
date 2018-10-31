@@ -27,7 +27,7 @@ $shadow: 2px 2px 5px #181308, inset 2px 2px 5px #b8933d;
           width: 100%;
           height: 500px;
           position: relative;
-          border: 80px solid #000;
+          border: 100px solid #000;
           border-radius: 50%;
           transform: rotateZ(0);
           overflow: hidden;
@@ -339,7 +339,7 @@ $shadow: 2px 2px 5px #181308, inset 2px 2px 5px #b8933d;
 
           &__image {
             max-height: 280px;
-            border: 50px solid #000;
+            border: 60px solid #000;
 
             &__disc {
               width: 60px;

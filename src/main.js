@@ -379,9 +379,6 @@ class AudioPlayer {
     const tracksListItem = [...this.tracksListDOMElement.children][this.activeTrackIndex];
     const images = document.querySelectorAll('.current-track__header__images__item__image');
     const activeImage = images[this.activeTrackIndex];
-    console.log(images)
-    console.log(activeImage);
-    console.log('aaa')
     const className = `tracks-list__item--clicked`;
 
     if(this.audio.paused) {
