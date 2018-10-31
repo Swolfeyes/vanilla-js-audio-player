@@ -18,6 +18,7 @@ body {
 
 .audio-player {
   width: 100%;
+  display: flex;
 }
 
 
@@ -27,6 +28,10 @@ body {
   body {
     padding: 20px;
   }
+
+  .audio-player {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 687px) {
@@ -35,7 +40,7 @@ body {
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 380px) {
   body {
     padding: 0;
   }
